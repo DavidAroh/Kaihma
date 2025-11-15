@@ -72,7 +72,7 @@ export const HeaderSection = (): JSX.Element => {
           ))}
         </nav>
 
-        <Button className="hidden lg:inline-flex h-14 items-center justify-center gap-2.5 px-6 py-3 bg-[#2d17fc] hover:bg-[#2d17fc]/90 rounded-[100px] relative right-8">
+        <Button onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })} className="hidden lg:inline-flex h-14 items-center justify-center gap-2.5 px-6 py-3 bg-[#2d17fc] hover:bg-[#2d17fc]/90 rounded-[100px] relative right-8">
           <span className="w-fit font-global-tokens-headings-h-6 font-[number:var(--global-tokens-headings-h-6-font-weight)] text-white text-[length:var(--global-tokens-headings-h-6-font-size)] tracking-[var(--global-tokens-headings-h-6-letter-spacing)] leading-[var(--global-tokens-headings-h-6-line-height)] whitespace-nowrap [font-style:var(--global-tokens-headings-h-6-font-style)]">
             Get started
           </span>
@@ -101,7 +101,7 @@ export const HeaderSection = (): JSX.Element => {
               {item.label}
             </button>
           ))}
-          <Button className="w-full h-14 bg-[#2d17fc] hover:bg-[#2d17fc]/90 rounded-[100px]">
+          <Button onClick={() => { document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }} className="w-full h-14 bg-[#2d17fc] hover:bg-[#2d17fc]/90 rounded-[100px]">
             <span className="font-global-tokens-headings-h-6 font-[number:var(--global-tokens-headings-h-6-font-weight)] text-white text-[length:var(--global-tokens-headings-h-6-font-size)] [font-style:var(--global-tokens-headings-h-6-font-style)]">
               Get started
             </span>
